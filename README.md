@@ -195,13 +195,13 @@ cy.checkAccessibility() // Basic a11y validation
 ## 🔧 Development
 
 - [Development Plan](./docs/development_plan.md) - План разработки
-- [Central Documentation](../profitable-web-docs/) - Центральная документация проекта
+- [Central Documentation](https://github.com/ProfitableWeb/profitable-web-docs) - Центральная документация проекта
 
 ## 🔗 Links
 
-- **Central Docs**: [profitable-web-docs](../profitable-web-docs/)
-- **Backend API**: [profitable-web-backend](../profitable-web-backend/)
-- **Admin Panel**: [profitable-web-admin](../profitable-web-admin/)
+- **Central Docs**: [profitable-web-docs](https://github.com/ProfitableWeb/profitable-web-docs)
+- **Backend API**: [profitable-web-backend](https://github.com/ProfitableWeb/profitable-web-backend)
+- **Admin Panel**: [profitable-web-admin](https://github.com/ProfitableWeb/profitable-web-admin)
 - **Live Site**: [ProfitableWeb.ru](https://profitableweb.ru) (текущий WordPress)
 
 ---

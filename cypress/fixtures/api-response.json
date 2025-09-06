@@ -1,0 +1,46 @@
+{
+  "featured_articles": {
+    "articles": [
+      {
+        "id": 1,
+        "title": "Монетизация YouTube канала: Полное руководство",
+        "slug": "youtube-monetization",
+        "excerpt": "Как превратить свой канал в источник стабильного дохода",
+        "category": "видео-контент",
+        "readingTime": 15,
+        "publishedAt": "2025-09-01"
+      },
+      {
+        "id": 2,
+        "title": "Создание онлайн-курсов: От идеи до продаж",
+        "slug": "online-courses",
+        "excerpt": "Монетизация экспертности через обучающие программы",
+        "category": "образование",
+        "readingTime": 12,
+        "publishedAt": "2025-08-28"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Творчество",
+      "slug": "creative",
+      "description": "Монетизация творческих навыков и хобби",
+      "articleCount": 15
+    },
+    {
+      "id": 2,
+      "name": "Видео-контент",
+      "slug": "video-content",
+      "description": "YouTube, TikTok и другие видеоплатформы",
+      "articleCount": 8
+    }
+  ],
+  "user_progress": {
+    "completedSteps": ["market-research", "skill-assessment"],
+    "currentStep": "monetization-strategy",
+    "progress": 40,
+    "totalSteps": 5
+  }
+}

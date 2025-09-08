@@ -1,58 +1,59 @@
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
+import { cleanup } from '@testing-library/react';
+import { afterEach, vi } from 'vitest';
+
+// Extend Vitest's expect with jest-dom matchers
+import type { TestingLibraryMatchers } from '@testing-library/jest-dom/matchers';
+
+declare module 'vitest' {
+  interface Assertion<T = any> extends jest.Matchers<void>, TestingLibraryMatchers<T, void> {}
+}
+
+// Cleanup after each test
+afterEach(() => {
+  cleanup();
+});
 
 // Mock Next.js router
-jest.mock('next/router', () => ({
+vi.mock('next/router', () => ({
   useRouter() {
     return {
       route: '/',
       pathname: '/',
       query: {},
       asPath: '/',
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest.fn(),
+      push: vi.fn(),
+      pop: vi.fn(),
+      reload: vi.fn(),
+      back: vi.fn(),
+      prefetch: vi.fn().mockResolvedValue(undefined),
+      beforePopState: vi.fn(),
       events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
+        on: vi.fn(),
+        off: vi.fn(),
+        emit: vi.fn(),
       },
-    }
+      isFallback: false,
+    };
   },
-}))
+}));
 
 // Mock Next.js navigation
-jest.mock('next/navigation', () => ({
+vi.mock('next/navigation', () => ({
   useRouter() {
     return {
-      push: jest.fn(),
-      replace: jest.fn(),
-      prefetch: jest.fn(),
-      back: jest.fn(),
-      forward: jest.fn(),
-      refresh: jest.fn(),
-    }
+      push: vi.fn(),
+      replace: vi.fn(),
+      refresh: vi.fn(),
+      back: vi.fn(),
+      forward: vi.fn(),
+      prefetch: vi.fn(),
+    };
   },
   useSearchParams() {
-    return new URLSearchParams()
+    return new URLSearchParams();
   },
   usePathname() {
-    return '/'
+    return '/';
   },
-}))
-
-// Global test utilities
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
+}));

@@ -4,7 +4,8 @@
 
 ## 📋 Обзор
 
-Публичный веб-сайт платформы ProfitableWeb - исследовательского проекта, документирующего insights о генерации финансового капитала из личных хобби.
+Публичный веб-сайт платформы ProfitableWeb - исследовательского проекта, документирующего insights о генерации
+финансового капитала из личных хобби.
 
 ## 🛠️ Технологический стек
 
@@ -24,7 +25,7 @@
 # Установка зависимостей
 bun install
 
-# Запуск development сервера  
+# Запуск development сервера
 bun run dev
 
 # Сборка для production
@@ -49,7 +50,7 @@ bun run type-check
 ```
 app/
 ├── page.tsx                 # Главная страница
-├── [slug]/page.tsx          # Статьи (прямо из корня) 
+├── [slug]/page.tsx          # Статьи (прямо из корня)
 ├── categories/
 │   └── [category]/page.tsx  # Страницы категорий
 ├── about/page.tsx           # О проекте
@@ -59,6 +60,7 @@ app/
 ## 🧑‍🔬 Тестирование
 
 ### 🎯 Testing Stack
+
 - **Unit/Component Tests**: Vitest + React Testing Library (fast, jsdom)
 - **E2E Tests**: Cypress (real browser, visual testing)
 - **Component Testing**: Cypress Component Testing (isolated components)
@@ -66,6 +68,7 @@ app/
 - **UI Testing**: Vitest UI + Cypress Test Runner
 
 ### ⚙️ Test Configuration
+
 - **Vitest Setup**: `src/test/setup.ts` + `vitest.config.ts` with path aliases
 - **Cypress Setup**: `cypress.config.ts` + support files with custom commands
 - **Mocks**: Next.js router/navigation mocks + API mocks
@@ -73,6 +76,7 @@ app/
 - **Custom Commands**: ProfitableWeb-specific testing utilities
 
 ### 📝 Writing Tests
+
 ```typescript
 // Component test example
 import { render, screen } from '@testing-library/react'
@@ -85,7 +89,7 @@ describe('ArticleCard', () => {
       title: 'How to Monetize Photography Hobby',
       excerpt: 'Learn proven strategies...'
     }
-    
+
     render(<ArticleCard article={mockArticle} />)
     expect(screen.getByText(mockArticle.title)).toBeInTheDocument()
   })
@@ -93,6 +97,7 @@ describe('ArticleCard', () => {
 ```
 
 ### 🚀 Testing Commands
+
 ```bash
 bun run test          # Run all tests
 bun run test:watch    # Watch mode for development
@@ -108,6 +113,7 @@ bun run test:e2e      # Build + start + run E2E tests
 ### 🌐 Cypress Browser Testing
 
 **How Cypress Works:**
+
 - 🖥️ Uses your **local browsers** (Chrome, Firefox, Edge, Electron)
 - 👀 Opens real browser window for visual testing
 - ⚡ Watch tests execute in real-time
@@ -115,24 +121,25 @@ bun run test:e2e      # Build + start + run E2E tests
 - 🔗 Network request interception and mocking
 
 **ProfitableWeb Custom Commands:**
+
 ```typescript
 // SEO validation
-cy.checkSEO('Page Title', 'Meta description')
-cy.checkJSONLD('Article') // Validates structured data
+cy.checkSEO('Page Title', 'Meta description');
+cy.checkJSONLD('Article'); // Validates structured data
 
 // Performance testing
-cy.checkPerformance() // Core Web Vitals validation
-cy.waitForPageLoad()  // Wait for complete page load
+cy.checkPerformance(); // Core Web Vitals validation
+cy.waitForPageLoad(); // Wait for complete page load
 
 // Navigation helpers
-cy.navigateToArticle('article-slug')
-cy.navigateToCategory('category-name')
+cy.navigateToArticle('article-slug');
+cy.navigateToCategory('category-name');
 
 // API mocking
-cy.mockApiResponse('/api/articles', mockData)
+cy.mockApiResponse('/api/articles', mockData);
 
 // Accessibility checks
-cy.checkAccessibility() // Basic a11y validation
+cy.checkAccessibility(); // Basic a11y validation
 ```
 
 ## 📱 SEO Features
@@ -152,20 +159,21 @@ cy.checkAccessibility() // Basic a11y validation
 - **Гибридная методология**: Короткие семантические классы + utility классы для состояний
 
 ### 🎨 SCSS Architecture
+
 ```scss
 // Пример чистой SCSS архитектуры без модулей
 .article {
   &-header {
     margin-bottom: 2rem;
-    
+
     &.featured {
       border-left: 4px solid var(--accent-color);
     }
   }
-  
+
   &-content {
     line-height: 1.6;
-    
+
     &.loading {
       opacity: 0.7;
     }
@@ -177,14 +185,14 @@ cy.checkAccessibility() // Basic a11y validation
     display: flex;
     gap: 1rem;
   }
-  
+
   &-link {
     text-decoration: none;
-    
+
     &:hover {
       color: var(--primary-color);
     }
-    
+
     &.active {
       font-weight: 600;
     }
@@ -206,4 +214,4 @@ cy.checkAccessibility() // Basic a11y validation
 
 ---
 
-*Frontend для исследования монетизации хобби* 💰
+_Frontend для исследования монетизации хобби_ 💰

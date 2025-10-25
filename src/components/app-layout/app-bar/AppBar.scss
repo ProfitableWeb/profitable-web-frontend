@@ -38,9 +38,27 @@
   justify-content: space-between;
   height: var(--space-xl);
   max-width: 100%;
+  transition: var(--transition-normal);
 
+  // Mobile (<768px)
+  height: 60px;
+  padding: 0 20px;
+
+  // Tablet (768-1024px)
   @include md {
-    padding: 0 16px;
+    height: 80px;
+    padding: 0 40px;
+  }
+
+  // Desktop (>1024px)
+  @include lg {
+    height: 80px;
+    padding: 0 40px;
+  }
+
+  // Large Desktop (>1440px)
+  @media (min-width: 1441px) {
+    padding: 40px;
   }
 }
 

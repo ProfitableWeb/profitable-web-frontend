@@ -147,6 +147,8 @@ const SwipeDetector: React.FC<SwipeDetectorProps> = ({
       document.addEventListener('mouseup', handleGlobalMouseUp);
       return () => document.removeEventListener('mouseup', handleGlobalMouseUp);
     }
+    
+    return undefined;
   }, [isDragging]);
 
   return (

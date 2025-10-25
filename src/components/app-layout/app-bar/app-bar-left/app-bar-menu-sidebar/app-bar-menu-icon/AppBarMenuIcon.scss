@@ -1,5 +1,6 @@
 @import '@/styles/utils/variables';
 @import '@/styles/utils/mixins';
+@import '@/styles/utils/breakpoints';
 
 .app-bar-menu-icon {
   @include button-reset;
@@ -54,7 +55,23 @@
   // Состояние открытого меню
   &--open {
     .app-bar-menu-icon__container {
+      // Mobile (<768px)
       transform: translateX(160px);
+
+      // Tablet (768-1024px)
+      @include md {
+        transform: translateX(140px);
+      }
+
+      // Desktop (>1024px)
+      @include lg {
+        transform: translateX(140px);
+      }
+
+      // Large Desktop (>1440px)
+      @media (min-width: 1441px) {
+        transform: translateX(130px);
+      }
     }
 
     .app-bar-menu-icon__menu {

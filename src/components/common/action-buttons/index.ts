@@ -1,1 +1,1 @@
-export { default } from './AppBarActions';
+export { default } from '../app-bar-actions/AppBarActions';

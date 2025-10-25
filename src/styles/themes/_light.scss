@@ -107,6 +107,22 @@
   --code-background: #f5f5f5;
   --code-border: #e5e5e5;
   --code-text: #262626;
+
+  // ===== TEXT COLORS =====
+  --text-primary-color: #000000;
+  --text-paragraph-color: #333333;
+  --text-accent-color: #3dbb42;
+
+  // ===== HERO HEADER COLORS =====
+  --hero-title-color: rgba(0, 0, 0, .8);
+  --hero-text-color: #000000;
+  --hero-link-color: rgba(0, 0, 0, .9);
+  --hero-bg-color: #ffffff;
+  --mark-green-bg: #c5f3c5;
+  --hero-category-color: #009ce0;
+  --hero-category-border-color: rgba(0, 156, 224, 0.15);
+  --link-underline-color: rgba(0, 0, 0, 0.2);
+  --link-hover-color: rgba(0, 0, 0, 0.5);
 }
 
 // ===== LIGHT THEME SPECIFIC STYLES =====

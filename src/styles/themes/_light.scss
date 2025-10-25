@@ -4,10 +4,10 @@
 [data-theme="light"],
 :root {
   // ===== BRAND COLORS =====
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-primary-active: #1d4ed8;
-  --color-primary-light: #dbeafe;
+  --color-primary: #5ADC5A;
+  --color-primary-hover: #4BC04B;
+  --color-primary-active: #3FA43F;
+  --color-primary-light: #E8F5E8;
 
   --color-secondary: #14b8a6;
   --color-secondary-hover: #0d9488;
@@ -18,9 +18,9 @@
   --color-accent-light: #fed7aa;
 
   // ===== SURFACE COLORS =====
-  --color-background: #fafafa;
+  --color-background: #ffffff;
   --color-surface: #f5f5f5;
-  --color-surface-hover: #e5e5e5;
+  --color-surface-hover: #58c0691c;
   --color-surface-active: #d4d4d4;
   --color-border: #d4d4d4;
   --color-border-hover: #a3a3a3;
@@ -50,12 +50,12 @@
   --color-info-dark: #0369a1;
 
   // ===== INTERACTIVE COLORS =====
-  --color-link: #2563eb;
-  --color-link-hover: #1d4ed8;
-  --color-link-visited: #1e40af;
+  --color-link: #5ADC5A;
+  --color-link-hover: #4BC04B;
+  --color-link-visited: #3FA43F;
 
-  --color-focus: #3b82f6;
-  --color-focus-ring: rgba(59, 130, 246, 0.1);
+  --color-focus: #5ADC5A;
+  --color-focus-ring: rgba(90, 220, 90, 0.1);
 
   // ===== SEMANTIC COLORS =====
   --color-highlight: #fed7aa;
@@ -90,14 +90,14 @@
   // Forms
   --input-background: #fafafa;
   --input-border: #d4d4d4;
-  --input-border-focus: #3b82f6;
+  --input-border-focus: #5ADC5A;
   --input-text: #171717;
   --input-placeholder: #737373;
 
   // Buttons
-  --button-primary-bg: #3b82f6;
+  --button-primary-bg: #5ADC5A;
   --button-primary-text: #fafafa;
-  --button-primary-hover: #2563eb;
+  --button-primary-hover: #4BC04B;
 
   --button-secondary-bg: #f5f5f5;
   --button-secondary-text: #171717;

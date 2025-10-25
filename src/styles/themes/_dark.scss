@@ -6,10 +6,10 @@
 
   // ===== BRAND COLORS =====
   // Slightly adjusted for better contrast in dark mode
-  --color-primary: #60a5fa;
-  --color-primary-hover: #93c5fd;
-  --color-primary-active: #bfdbfe;
-  --color-primary-light: #1e3a8a;
+  --color-primary: #5ADC5A;
+  --color-primary-hover: #6BE66B;
+  --color-primary-active: #7AF07A;
+  --color-primary-light: #1A4D1A;
 
   --color-secondary: #2dd4bf;
   --color-secondary-hover: #5eead4;
@@ -53,12 +53,12 @@
   --color-info-dark: #7dd3fc;
 
   // ===== INTERACTIVE COLORS =====
-  --color-link: #60a5fa;
-  --color-link-hover: #93c5fd;
-  --color-link-visited: #3b82f6;
+  --color-link: #5ADC5A;
+  --color-link-hover: #6BE66B;
+  --color-link-visited: #4BC04B;
 
-  --color-focus: #60a5fa;
-  --color-focus-ring: rgba(96, 165, 250, 0.2);
+  --color-focus: #5ADC5A;
+  --color-focus-ring: rgba(90, 220, 90, 0.2);
 
   // ===== SEMANTIC COLORS =====
   --color-highlight: #7c2d12;
@@ -94,14 +94,14 @@
   // Forms
   --input-background: #262626;
   --input-border: #525252;
-  --input-border-focus: #60a5fa;
+  --input-border-focus: #5ADC5A;
   --input-text: #f5f5f5;
   --input-placeholder: #737373;
 
   // Buttons
-  --button-primary-bg: #3b82f6;
+  --button-primary-bg: #5ADC5A;
   --button-primary-text: #f5f5f5;
-  --button-primary-hover: #60a5fa;
+  --button-primary-hover: #6BE66B;
 
   --button-secondary-bg: #404040;
   --button-secondary-text: #f5f5f5;
@@ -191,8 +191,8 @@
     // and user prefers dark mode
     color-scheme: dark;
 
-    --color-primary: #60a5fa;
-    --color-primary-hover: #93c5fd;
+    --color-primary: #5ADC5A;
+    --color-primary-hover: #6BE66B;
     --color-surface: #262626;
     --color-background: #171717;
     --color-text-primary: #f5f5f5;

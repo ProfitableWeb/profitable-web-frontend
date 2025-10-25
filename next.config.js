@@ -7,6 +7,10 @@ const nextConfig = {
     // reactCompiler: true,
   },
 
+  // Allow cross-origin requests from specific IPs during development
+  // In Next.js 15+, allowedDevOrigins is a top-level config option
+  allowedDevOrigins: ['10.66.130.47'],
+
   // Enable SCSS support
   sassOptions: {
     includePaths: ['./src/styles'],

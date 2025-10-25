@@ -3,8 +3,6 @@ import { Inter, Playfair_Display } from 'next/font/google';
 
 import '@/styles/globals.scss';
 import { metadata as siteMetadata } from '@/config/metadata';
-import { HeadContent } from '@/components/HeadContent';
-import { ThemeScript } from '@/utils/theme';
 
 // Font configurations
 const inter = Inter({
@@ -31,25 +29,11 @@ export default function RootLayout({
     <html
       lang='en'
       className={`${inter.variable} ${playfair.variable}`}
+      data-theme='light'
       suppressHydrationWarning
     >
-      <head>
-        <HeadContent />
-      </head>
       <body>
-        <ThemeScript />
-
-        <div className='main-layout'>
-          <header className='header'>
-            {/* Header will be implemented in future tasks */}
-          </header>
-
-          <main className='main-content'>{children}</main>
-
-          <footer className='footer'>
-            {/* Footer will be implemented in future tasks */}
-          </footer>
-        </div>
+        <div className='main-layout'>{children}</div>
       </body>
     </html>
   );

@@ -1,0 +1,2 @@
+export { distributeArticles } from './distribution';
+

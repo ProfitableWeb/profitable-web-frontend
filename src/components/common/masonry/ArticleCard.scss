@@ -1,0 +1,159 @@
+@import '@/styles/utils/variables';
+@import '@/styles/utils/breakpoints';
+@import '@/styles/utils/mixins';
+
+.article-card {
+  background: var(--color-background-primary, #ffffff);
+  padding-bottom: 30px;
+  width: 100%;
+  overflow: clip;
+
+  &__header-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease-in-out;
+
+  }
+
+  &__image-link {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+    position: relative;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color-text-primary, #000000);
+    padding-bottom: 6px;
+    margin: 0;
+    display: inline;
+    
+    // Двойной gradient для анимации подчёркивания (эффект маркера)
+    // Техника: https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
+    background: 
+      linear-gradient(
+        to right,
+        transparent,
+        transparent
+      ),
+      linear-gradient(
+        to right,
+        var(--mark-green-bg),
+        var(--mark-green-bg)
+      );
+    background-size: 100% 0.6em, 0 0.6em; // Толстая линия как у маркера
+    background-position: 0 100%, 0 100%; // Немного выше низа
+    background-repeat: no-repeat;
+    transition: background-size 0.15s ease-in-out; // Быстрое исчезновение при уходе курсора
+  }
+
+  // Анимация подчёркивания при hover
+  &__header-link:hover &__title {
+    background-size: 0 2em, 100% 2em; // Маркер появляется слева направо
+    transition: background-size 0.3s ease-in-out; // Плавное появление
+  }
+
+  &__subtitle-wrap {
+    margin-top: 4px;
+    line-height: 22px;
+  }
+
+  &__subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-text-primary, #000000);
+    margin: 0;
+    display: inline;
+    
+    // Аналогичное подчёркивание маркером с задержкой
+    background: 
+      linear-gradient(
+        to right,
+        transparent,
+        transparent
+      ),
+      linear-gradient(
+        to right,
+        var(--mark-green-bg),
+        var(--mark-green-bg)
+      );
+    background-size: 100% 1em, 0 1em; // Чуть меньше чем у заголовка
+    background-position: 0 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.15s ease-in-out; // Быстрое исчезновение при уходе курсора
+  }
+  
+  // Анимация подзаголовка при hover
+  &__header-link:hover &__subtitle {
+    background-size: 0 2em, 100% 2em;
+    transition: background-size 0.3s ease-in-out 0.35s; // Плавное появление с задержкой
+  }
+
+  &__date {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--color-text-tertiary, #b8b8b8);
+    padding: 8px 0;
+  }
+
+  &__image-wrap {
+    height: 152px;
+    border-radius: 6px;
+    background: #eaeaea;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__summary {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-text-primary, #2c2c2c);
+
+    blockquote {
+      font-size: 13px;
+      margin: 14px 0;
+      padding-left: 14px;
+      border-left: 2px solid #999;
+    }
+    p {
+      margin: 0;
+      margin-bottom: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Accessibility: уменьшенные анимации
+@media (prefers-reduced-motion: reduce) {
+  .article-card {
+    transition: none !important;
+
+    &:hover {
+      transform: none !important;
+    }
+  }
+}
+

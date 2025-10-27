@@ -25,3 +25,5 @@ export interface Article {
   /** Blur placeholder для изображения */
   blurDataURL?: string;
 }
+
+

@@ -3,7 +3,7 @@
 @import '@/styles/utils/mixins';
 
 .article-card {
-  background: var(--color-background-primary, #ffffff);
+  background: transparent;
   padding-bottom: 30px;
   width: 100%;
   overflow: clip;
@@ -12,14 +12,13 @@
     display: block;
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.2s ease-in-out;
-
+    transition: var(--transition-opacity);
   }
 
   &__image-link {
     display: block;
     text-decoration: none;
-    transition: opacity 0.2s ease-in-out;
+    transition: var(--transition-opacity);
     position: relative;
     &:hover {
       opacity: 0.8;
@@ -31,7 +30,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
-    color: var(--color-text-primary, #000000);
+    color: var(--masonry-title-color);
     padding-bottom: 6px;
     margin: 0;
     display: inline;
@@ -46,19 +45,20 @@
       ),
       linear-gradient(
         to right,
-        var(--mark-green-bg),
-        var(--mark-green-bg)
+        var(--masonry-marker-bg),
+        var(--masonry-marker-bg)
       );
     background-size: 100% 0.6em, 0 0.6em; // Толстая линия как у маркера
     background-position: 0 100%, 0 100%; // Немного выше низа
     background-repeat: no-repeat;
-    transition: background-size 0.15s ease-in-out; // Быстрое исчезновение при уходе курсора
+    transition: background-size var(--duration-fast) ease-in-out; // Быстрое исчезновение при уходе курсора
   }
 
   // Анимация подчёркивания при hover
   &__header-link:hover &__title {
+    color: var(--masonry-marker-text);
     background-size: 0 2em, 100% 2em; // Маркер появляется слева направо
-    transition: background-size 0.3s ease-in-out; // Плавное появление
+    transition: background-size var(--duration-medium) ease-in-out, color .3s ease-in-out; 
   }
 
   &__subtitle-wrap {
@@ -68,9 +68,9 @@
 
   &__subtitle {
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    font-weight: var(--font-weight-subheading);
     font-size: 16px;
-    color: var(--color-text-primary, #000000);
+    color: var(--masonry-subtitle-color);
     margin: 0;
     display: inline;
     
@@ -83,19 +83,22 @@
       ),
       linear-gradient(
         to right,
-        var(--mark-green-bg),
-        var(--mark-green-bg)
+        var(--masonry-marker-bg),
+        var(--masonry-marker-bg)
       );
     background-size: 100% 1em, 0 1em; // Чуть меньше чем у заголовка
     background-position: 0 100%, 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.15s ease-in-out; // Быстрое исчезновение при уходе курсора
+    transition: background-size var(--duration-fast) ease-in-out; // Быстрое исчезновение при уходе курсора
   }
   
   // Анимация подзаголовка при hover
   &__header-link:hover &__subtitle {
+    color: var(--masonry-marker-text);
     background-size: 0 2em, 100% 2em;
-    transition: background-size 0.3s ease-in-out 0.35s; // Плавное появление с задержкой
+    transition: 
+    background-size var(--duration-medium) ease-in-out var(--delay-medium), 
+    color var(--duration-slow) ease-in-out var(--delay-medium); 
   }
 
   &__date {
@@ -104,14 +107,14 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 1.6;
-    color: var(--color-text-tertiary, #b8b8b8);
+    color: var(--masonry-date-color);
     padding: 8px 0;
   }
 
   &__image-wrap {
     height: 152px;
     border-radius: 6px;
-    background: #eaeaea;
+    background: var(--masonry-image-bg);
     margin-bottom: 16px;
     overflow: hidden;
   }
@@ -127,13 +130,33 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 1.5;
-    color: var(--color-text-primary, #2c2c2c);
+    color: var(--masonry-paragraph-color);
+
+    // Стили для ссылок в HTML контенте
+    a {
+      color: var(--masonry-link-color);
+      text-decoration: underline;
+      text-decoration-color: var(--masonry-link-underline);
+      text-underline-offset: 2px;
+      transition: 
+        color 0.2s ease-in-out,
+        text-decoration-color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--masonry-link-hover);
+        text-decoration-color: var(--masonry-link-underline-hover);
+      }
+
+      &:visited {
+        color: var(--masonry-link-visited);
+      }
+    }
 
     blockquote {
       font-size: 13px;
       margin: 14px 0;
       padding-left: 14px;
-      border-left: 2px solid #999;
+      border-left: 2px solid var(--masonry-blockquote-border);
     }
     p {
       margin: 0;
@@ -149,10 +172,10 @@
 // Accessibility: уменьшенные анимации
 @media (prefers-reduced-motion: reduce) {
   .article-card {
-    transition: none !important;
+    transition: none;
 
     &:hover {
-      transform: none !important;
+      transform: none;
     }
   }
 }

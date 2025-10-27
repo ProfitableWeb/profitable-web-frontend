@@ -19,10 +19,18 @@
   position: relative;
   overflow: hidden;
 
+  // Важно! Сбрасываем стили visited ссылок
+  &:visited {
+    color: var(--color-text-muted);
+  }
+
   &:hover {
     color: var(--color-primary);
   }
 
+  &:hover:visited {
+    color: var(--color-primary);
+  }
 
   &:active {
     transform: scale(0.95);
@@ -38,11 +46,18 @@
   svg {
     display: block;
     transition: var(--transition-color);
-    // Принудительно включаем SVG в stacking context для backdrop-filter
-    isolation: isolate;
-    transform: translateZ(0);
-    will-change: transform;
+    
+    path {
+      fill: currentColor;
+      fill-opacity: 0.9;
+      transition: fill-opacity var(--transition-color);
+    }
   }
+}
+
+// Hover увеличивает fill-opacity для более яркого отображения
+.social-icons__link:hover .social-icons__icon svg path {
+  fill-opacity: 1;
 }
 
 .social-icons__label {
@@ -117,7 +132,15 @@
 .social-icons__link {
   color: var(--color-text-muted);
   
+  &:visited {
+    color: var(--color-text-muted);
+  }
+  
   &:hover {
+    color: var(--color-primary);
+  }
+  
+  &:hover:visited {
     color: var(--color-primary);
   }
 }
@@ -127,7 +150,15 @@
   .social-icons__link {
     color: var(--color-text-muted);
     
+    &:visited {
+      color: var(--color-text-muted);
+    }
+    
     &:hover {
+      color: var(--color-primary);
+    }
+    
+    &:hover:visited {
       color: var(--color-primary);
     }
   }
@@ -137,7 +168,15 @@
 [data-theme="light"] .social-icons__link {
   color: var(--color-text-muted);
   
+  &:visited {
+    color: var(--color-text-muted);
+  }
+  
   &:hover {
+    color: var(--color-text-primary);
+  }
+  
+  &:hover:visited {
     color: var(--color-text-primary);
   }
 }
@@ -146,7 +185,15 @@
 [data-theme="dark"] .social-icons__link {
   color: var(--color-text-muted);
   
+  &:visited {
+    color: var(--color-text-muted);
+  }
+  
   &:hover {
+    color: var(--color-primary);
+  }
+  
+  &:hover:visited {
     color: var(--color-primary);
   }
 }

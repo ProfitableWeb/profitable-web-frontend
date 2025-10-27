@@ -22,15 +22,17 @@
   &__item {
     box-sizing: content-box;
     display: inline-block;
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family);
     font-weight: var(--font-weight-normal);
     color: var(--hero-category-color);
-    transition: color var(--transition-fast);
     text-decoration: none;
     padding: 4px 8px;
     border-radius: 12px;
     border: 2px solid var(--hero-category-border-color);
-    transition: background-color .3s;
+    transition: 
+      var(--transition-color),
+      var(--transition-background),
+      var(--transition-border);
 
     // Mobile (<768px)
     font-size: 13px;

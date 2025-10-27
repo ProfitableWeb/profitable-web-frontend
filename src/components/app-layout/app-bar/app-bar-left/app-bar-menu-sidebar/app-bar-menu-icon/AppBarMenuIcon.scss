@@ -29,7 +29,7 @@
     position: relative;
     width: 20px;
     height: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform var(--duration-medium) ease-in-out;
   }
 
   &__menu,
@@ -39,7 +39,9 @@
     left: 0;
     width: 20px;
     height: 20px;
-    transition: all 0.3s ease-in-out;
+    transition: 
+      opacity var(--duration-medium) ease-in-out, 
+      transform var(--duration-medium) ease-in-out;
   }
 
   &__menu {

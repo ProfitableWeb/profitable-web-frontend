@@ -31,6 +31,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', className = '' }) => {
               <path
                 d='M23.357 13.7956L25.8377 0H31L26.4142 22H21.0073L18.1161 9.45778L15.2773 22H9.88786L5.28459 0H10.4644L12.9451 13.7956L15.9149 0H20.3347L23.3483 13.7956H23.357Z'
                 className='logo__path-accent'
+                fill='currentColor'
               />
             </g>
           </g>

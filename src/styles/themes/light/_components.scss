@@ -1,0 +1,45 @@
+// Light Theme - Component-Specific Colors
+// Colors for specific UI components
+
+[data-theme="light"],
+:root {
+  // ===== COMPONENT-SPECIFIC COLORS =====
+
+  // Header/Navigation
+  --nav-background: rgba(255, 255, 255, 0.8);
+  --nav-text: #171717;
+  --nav-border: #e5e5e5;
+
+  // Sidebar
+  --sidebar-background: #f5f5f5;
+  --sidebar-text: #262626;
+  --sidebar-border: #e5e5e5;
+
+  // Cards
+  --card-background: #fafafa;
+  --card-border: #e5e5e5;
+  --card-shadow: var(--shadow-sm);
+
+  // Forms
+  --input-background: #fafafa;
+  --input-border: #d4d4d4;
+  --input-border-focus: #5ADC5A;
+  --input-text: #171717;
+  --input-placeholder: #737373;
+
+  // Buttons
+  --button-primary-bg: #5ADC5A;
+  --button-primary-text: #fafafa;
+  --button-primary-hover: #4BC04B;
+
+  --button-secondary-bg: #f5f5f5;
+  --button-secondary-text: #171717;
+  --button-secondary-hover: #e5e5e5;
+
+  // Code blocks
+  --code-background: #f5f5f5;
+  --code-border: #e5e5e5;
+  --code-text: #262626;
+}
+
+

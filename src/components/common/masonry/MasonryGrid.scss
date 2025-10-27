@@ -3,7 +3,7 @@
 .masonry-grid {
   width: 100%;
   min-height: 400px;
-  background: var(--color-background-primary, #ffffff);
+  background: transparent;
 
   &__fallback {
     display: grid;
@@ -14,8 +14,9 @@
 
   &__fallback-card {
     padding: 20px;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
+    background: transparent;
 
     a {
       text-decoration: none;
@@ -26,17 +27,18 @@
       font-size: 18px;
       font-weight: 700;
       margin: 0 0 8px 0;
+      color: var(--color-text-primary);
     }
 
     p {
       font-size: 16px;
       margin: 0 0 8px 0;
-      color: #464646;
+      color: var(--color-text-secondary);
     }
 
     time {
       font-size: 12px;
-      color: #b8b8b8;
+      color: var(--color-text-muted);
     }
   }
 }

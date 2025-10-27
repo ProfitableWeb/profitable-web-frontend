@@ -8,8 +8,7 @@
 .hero-header {
   display: flex;
   align-items: flex-start;
-  background-color: var(--hero-bg-color);
-  transition: background-color var(--transition-normal);
+  background-color: transparent;
 
   // ===== CONTAINER =====
   &__container {
@@ -64,12 +63,12 @@
     a {
       opacity: 1;
       border-bottom: none;
-      color: var(--hero-link-color);
+      color: var(--hero-title-link-color) !important;
       transition: color var(--transition-normal);
       text-decoration: none;
       font-weight: 800;
       &:hover {
-        color: var(--text-accent-color);
+        color: var(--hero-title-link-hover-color) !important;
       }
 
       &:focus-visible {
@@ -88,14 +87,16 @@
     color: var(--hero-text-color);
     margin: 0;
     transition: color var(--transition-normal);
-
+    a {
+      color: var(--hero-paragraph-link-color)!important;
+    }
     // Mobile (<768px)
     font-size: 13px;
     line-height: 20px;
 
     // Tablet & Desktop (>=768px)
     @include md {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 24px;
     }
 

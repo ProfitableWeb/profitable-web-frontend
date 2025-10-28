@@ -16,10 +16,17 @@ themes/
 │   ├── _interactive.scss    # Интерактивные элементы (links, focus)
 │   ├── _semantic.scss       # Семантические цвета (highlight, selection, code)
 │   ├── _shadows.scss        # Определения теней
-│   ├── _components.scss     # Цвета компонентов (nav, cards, forms, buttons)
-│   ├── _hero.scss          # Hero header цвета
-│   ├── _masonry.scss       # Masonry сетка и карточки статей
-│   └── _overrides.scss     # Специфичные стили темы (scrollbar, selection)
+│   ├── components/
+│   │   ├── _nav.scss       # App bar / header
+│   │   ├── _sidebar.scss   # Sidebar
+│   │   ├── _cards.scss     # Cards
+│   │   ├── _forms.scss     # Forms
+│   │   ├── _buttons.scss   # Buttons
+│   │   ├── _code.scss      # Code blocks
+│   │   ├── _hero.scss      # Hero header цвета
+│   │   └── _masonry.scss   # Masonry сетка и карточки статей
+│   ├── _overrides.scss     # Специфичные стили темы (scrollbar, selection)
+│   └── _media.scss         # Media queries для system preference
 │
 ├── dark/                    # Тёмная тема
 │   ├── _index.scss          # Главный файл (импортирует все частичные файлы)
@@ -31,9 +38,15 @@ themes/
 │   ├── _interactive.scss    # Интерактивные элементы
 │   ├── _semantic.scss       # Семантические цвета
 │   ├── _shadows.scss        # Определения теней (darker for depth)
-│   ├── _components.scss     # Цвета компонентов
-│   ├── _hero.scss          # Hero header цвета
-│   ├── _masonry.scss       # Masonry сетка и карточки статей
+│   ├── components/
+│   │   ├── _nav.scss       # App bar / header
+│   │   ├── _sidebar.scss   # Sidebar
+│   │   ├── _cards.scss     # Cards
+│   │   ├── _forms.scss     # Forms
+│   │   ├── _buttons.scss   # Buttons
+│   │   ├── _code.scss      # Code blocks
+│   │   ├── _hero.scss      # Hero header цвета
+│   │   └── _masonry.scss   # Masonry сетка и карточки статей
 │   ├── _overrides.scss     # Специфичные стили темы
 │   └── _media.scss         # Media queries для system preference
 │
@@ -144,7 +157,7 @@ themes/
 - Category badges
 - Link underlines
 
-### Masonry (`_masonry.scss`)
+### Masonry (`components/_masonry.scss`)
 
 Цвета для masonry-сетки и карточек статей:
 

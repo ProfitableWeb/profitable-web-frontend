@@ -1,0 +1,15 @@
+// Dark Theme - Feature Category Block
+// Variables to control text, border, background and hover behavior
+
+[data-theme="dark"] {
+  --feature-category-text: #4DBBFF;
+  --feature-category-text-hover: #a1dbff;
+
+  --feature-category-bg: transparent;
+  --feature-category-bg-hover: rgba(77, 187, 255, 0.10);
+
+  --feature-category-border: rgba(77, 187, 255, 0.20);
+  --feature-category-border-hover: rgba(77, 187, 255, 0.658);
+}
+
+

@@ -10,7 +10,7 @@
   border-radius: $radius-sm;
   background: transparent;
   color: var(--color-text-muted);
-  transition: var(--transition-color);
+
   cursor: pointer;
   
   &:hover:not(&--loading) {

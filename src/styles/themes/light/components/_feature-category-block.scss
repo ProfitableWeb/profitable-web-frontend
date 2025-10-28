@@ -1,0 +1,16 @@
+// Light Theme - Feature Category Block
+// Variables to control text, border, background and hover behavior
+
+[data-theme="light"],
+:root {
+  --feature-category-text: #009CE0;
+  --feature-category-text-hover: #009CE0;
+
+  --feature-category-bg: transparent;
+  --feature-category-bg-hover: rgba(0, 156, 224, 0.08);
+
+  --feature-category-border: rgba(0, 156, 224, 0.15);
+  --feature-category-border-hover: rgba(0, 156, 224, 0.25);
+}
+
+

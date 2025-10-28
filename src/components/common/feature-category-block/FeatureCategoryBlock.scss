@@ -24,11 +24,11 @@
     display: inline-block;
     font-family: var(--font-family);
     font-weight: var(--font-weight-normal);
-    color: var(--hero-category-color);
+    color: var(--feature-category-text);
     text-decoration: none;
     padding: 4px 8px;
     border-radius: 12px;
-    border: 2px solid var(--hero-category-border-color);
+    border: 2px solid var(--feature-category-border);
     transition: 
       var(--transition-color),
       var(--transition-background),
@@ -46,7 +46,9 @@
 
     // Hover эффект
     &:hover {
-      background-color: var(--hero-category-border-color);
+      color: var(--feature-category-text-hover);
+      background-color: var(--feature-category-bg-hover);
+      border-color: var(--feature-category-border-hover);
     }
     // Active эффект
     &:active {

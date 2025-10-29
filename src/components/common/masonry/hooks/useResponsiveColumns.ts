@@ -29,7 +29,7 @@ function debounce<T extends (...args: any[]) => any>(
  * Использует debounce для оптимизации производительности при resize
  *
  * @param debounceMs - Задержка debounce в миллисекундах (по умолчанию 150)
- * @returns Количество колонок (1-6)
+ * @returns Количество колонок (1-7)
  *
  * @example
  * ```tsx

@@ -27,21 +27,24 @@
   @media (min-width: 1800px) {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    max-width: 2000px;
   }
 
-  // XL Desktop (2400px - 3199px): 5 колонок
+  // XL Desktop (2400px - 2999px): 5 колонок
   @media (min-width: 2400px) {
     grid-template-columns: repeat(5, 1fr);
     gap: 40px;
-    max-width: 2600px;
   }
 
-  // Ultra-Wide (≥ 3200px): 6 колонок
-  @media (min-width: 3200px) {
+  // Ultra-Wide (≥ 3000px - 3299px): 6 колонок
+  @media (min-width: 3000px) {
     grid-template-columns: repeat(6, 1fr);
     gap: 40px;
-    max-width: 3200px;
+  }
+
+  // Ultra-Wide (≥ 3200px): 7 колонок
+  @media (min-width: 3200px) {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 40px;
   }
 
   &__column {

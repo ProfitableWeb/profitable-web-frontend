@@ -7,19 +7,20 @@ export const BREAKPOINTS = {
   tablet: 1200,
   desktop: 1800,
   large: 2400,
-  xl: 3200,
+  xl: 3000,
+  xxl: 3200,
 } as const;
 
 /**
  * Определяет количество колонок на основе ширины экрана
  *
  * @param width - Ширина экрана в пикселях
- * @returns Количество колонок (1-6)
+ * @returns Количество колонок (1-7)
  *
  * @example
  * ```ts
  * getColumnCount(1920) // => 3 (desktop)
- * getColumnCount(3840) // => 6 (ultra-wide)
+ * getColumnCount(3840) // => 7 (ultra-wide)
  * ```
  */
 export function getColumnCount(width: number): number {
@@ -28,7 +29,8 @@ export function getColumnCount(width: number): number {
   if (width < BREAKPOINTS.desktop) return 3;
   if (width < BREAKPOINTS.large) return 4;
   if (width < BREAKPOINTS.xl) return 5;
-  return 6;
+  if (width < BREAKPOINTS.xxl) return 6;
+  return 7;
 }
 
 /**

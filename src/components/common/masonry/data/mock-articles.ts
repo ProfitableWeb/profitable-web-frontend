@@ -15,8 +15,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-15T10:00:00Z',
     summary:
       '<p>Бурное развитие ИИ активно оптимизирует существующие профессии, а также создаёт новые. Тенденция — упразднение узких специализаций, охват более высокого уровня понимания смежных дисциплин.</p><p>Одна из последних заметок была про «Эмоционального архитектора ИИ» — специализации, требующей высокой компетенции как контекст-инженера, так и психолога. Название такой профессии ещё не устоялось, каждый вариант описания этого вида деятельности несёт в себе свои акценты.</p><blockquote>Психоинженерия — это междисциплинарная область на стыке психологии, когнитивных наук, нейронаук, дизайна человеко‑машинных интерфейсов и разработки искусственного интеллекта.</blockquote><p>В этой статье-заметки, мы разберёмся с термином «психоинженерия», который активно набирает актуальность в попытках создать AGI-системы.</p>',
-    imageUrl: '/images/articles/youtube-monetization.jpg',
-    imageAlt: 'YouTube монетизация',
     slug: 'youtube-monetization-guide',
     category: 'Видео',
     readTime: 12,
@@ -39,8 +37,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-13T09:15:00Z',
     summary:
       '<p>NFT-революция изменила арт-индустрию навсегда. Цифровые художники теперь могут напрямую продавать свои работы коллекционерам без посредников.</p><p>В этом гайде мы пройдём путь от создания кошелька MetaMask до минтинга первой коллекции на OpenSea.</p><p>Бонус: список лучших маркетплейсов для начинающих NFT-художников.</p>',
-    imageUrl: '/images/articles/nft-guide.jpg',
-    imageAlt: 'NFT искусство',
     slug: 'nft-artists-guide',
     category: 'Криптовалюта',
     readTime: 15,
@@ -52,8 +48,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-12T16:45:00Z',
     summary:
       '<p>Качество звука — главный фактор успеха подкаста. Разбираем оборудование от бюджетных вариантов до профессиональных студийных решений.</p>',
-    imageUrl: '/images/articles/podcast-equipment.jpg',
-    imageAlt: 'Подкаст оборудование',
     slug: 'podcast-equipment-2025',
     category: 'Аудио',
     readTime: 10,
@@ -76,8 +70,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-10T08:00:00Z',
     summary:
       '<p>Notion — это not-only-заметки, но и полноценная операционная система для личной продуктивности. Базы данных, шаблоны, автоматизация — всё в одном месте.</p>',
-    imageUrl: '/images/articles/notion-guide.jpg',
-    imageAlt: 'Notion продуктивность',
     slug: 'notion-productivity-guide',
     category: 'Продуктивность',
     readTime: 11,
@@ -100,8 +92,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-08T15:15:00Z',
     summary:
       '<p>Алгоритм Instagram Reels постоянно меняется. Актуальные стратегии для максимального охвата: от выбора музыки до времени публикации.</p>',
-    imageUrl: '/images/articles/instagram-reels.jpg',
-    imageAlt: 'Instagram Reels',
     slug: 'instagram-reels-algorithm',
     category: 'Социальные сети',
     readTime: 7,
@@ -124,8 +114,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-06T12:00:00Z',
     summary:
       '<p>Фриланс даёт быстрые деньги, но ограничивает масштабирование. Продуктовый бизнес требует времени на запуск, но открывает путь к пассивному доходу.</p>',
-    imageUrl: '/images/articles/freelance-vs-product.jpg',
-    imageAlt: 'Фриланс vs Продукт',
     slug: 'freelance-vs-product-business',
     category: 'Бизнес',
     readTime: 10,
@@ -148,8 +136,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-04T14:20:00Z',
     summary:
       '<p>Автоматизация рутинных задач экономит десятки часов в месяц. Сравнение no-code платформ для создания интеграций между сервисами.</p><p>Примеры готовых workflow для контент-криейторов и предпринимателей.</p>',
-    imageUrl: '/images/articles/api-automation.jpg',
-    imageAlt: 'API автоматизация',
     slug: 'api-automation-tools',
     category: 'Технологии',
     readTime: 12,
@@ -172,8 +158,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-10-02T16:00:00Z',
     summary:
       '<p>WordPress — мощный, но сложный. Ghost — минималистичный и быстрый. Разбираем плюсы, минусы, стоимость хостинга и SEO-возможности обеих платформ.</p><p>Когда стоит мигрировать с WordPress на Ghost?</p>',
-    imageUrl: '/images/articles/ghost-vs-wordpress.jpg',
-    imageAlt: 'Ghost vs WordPress',
     slug: 'ghost-vs-wordpress-blog',
     category: 'Блоггинг',
     readTime: 11,
@@ -196,8 +180,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-30T13:00:00Z',
     summary:
       '<p>Midjourney генерирует изображения профессионального уровня за секунды. Промпт-инжиниринг, стили, параметры — всё что нужно знать для работы с AI-артом.</p><p>50 готовых промптов для блога, соцсетей и обложек.</p>',
-    imageUrl: '/images/articles/midjourney-guide.jpg',
-    imageAlt: 'Midjourney AI',
     slug: 'midjourney-content-creators',
     category: 'AI',
     readTime: 13,
@@ -220,8 +202,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-28T15:45:00Z',
     summary:
       '<p>Notion AI помогает писать быстрее без потери качества. Генерация идей, расширение текстов, перевод, резюмирование — практические примеры использования.</p>',
-    imageUrl: '/images/articles/notion-ai.jpg',
-    imageAlt: 'Notion AI',
     slug: 'notion-ai-content-automation',
     category: 'AI',
     readTime: 8,
@@ -244,8 +224,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-26T09:00:00Z',
     summary:
       '<p>Можно ли начать дропшиппинг без бюджета? Реалистичный разбор модели: поиск поставщиков, создание интернет-магазина, таргетированная реклама.</p>',
-    imageUrl: '/images/articles/dropshipping.jpg',
-    imageAlt: 'Дропшиппинг',
     slug: 'dropshipping-no-budget',
     category: 'E-commerce',
     readTime: 14,
@@ -268,8 +246,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-24T11:45:00Z',
     summary:
       '<p>GitHub Copilot обещает ускорить разработку в 2-3 раза. Тестирование на реальных проектах: JavaScript, Python, React. Плюсы, минусы и сравнение с альтернативами.</p><p>Когда AI-ассистент реально помогает, а когда только мешает.</p>',
-    imageUrl: '/images/articles/github-copilot.jpg',
-    imageAlt: 'GitHub Copilot',
     slug: 'github-copilot-review',
     category: 'Разработка',
     readTime: 11,
@@ -292,8 +268,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-22T16:00:00Z',
     summary:
       '<p>Pinterest часто недооценивают, но он генерирует огромный трафик для блогов и интернет-магазинов. SEO-оптимизация пинов, стратегии публикаций, аналитика.</p><p>Кейс: как Pinterest увеличил трафик блога в 5 раз.</p>',
-    imageUrl: '/images/articles/pinterest-business.jpg',
-    imageAlt: 'Pinterest бизнес',
     slug: 'pinterest-website-traffic',
     category: 'Маркетинг',
     readTime: 12,
@@ -316,8 +290,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-20T10:00:00Z',
     summary:
       '<p>Gumroad — платформа для инди-создателей. Минимальная комиссия, простая настройка, встроенная аналитика. Как запустить первый продукт и масштабироваться.</p>',
-    imageUrl: '/images/articles/gumroad-guide.jpg',
-    imageAlt: 'Gumroad',
     slug: 'gumroad-digital-products',
     category: 'E-commerce',
     readTime: 9,
@@ -340,8 +312,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-18T12:45:00Z',
     summary:
       '<p>Tailwind CSS ускоряет разработку интерфейсов в 2-3 раза. Никаких кастомных CSS-классов — всё через utility-классы. Настройка, плагины, интеграция с React/Vue.</p>',
-    imageUrl: '/images/articles/tailwind-css.jpg',
-    imageAlt: 'Tailwind CSS',
     slug: 'tailwind-css-fast-development',
     category: 'Разработка',
     readTime: 10,
@@ -364,8 +334,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-16T14:00:00Z',
     summary:
       '<p>Vercel и Netlify — лидеры в Jamstack-хостинге. Deployment, serverless функции, аналитика, цены — детальное сравнение для выбора платформы.</p><p>Когда Vercel лучше, а когда — Netlify.</p>',
-    imageUrl: '/images/articles/vercel-netlify.jpg',
-    imageAlt: 'Vercel vs Netlify',
     slug: 'vercel-vs-netlify-hosting',
     category: 'Разработка',
     readTime: 13,
@@ -388,8 +356,6 @@ export const mockArticles: Article[] = [
     createdAt: '2025-09-14T16:30:00Z',
     summary:
       '<p>Webflow — это не конструктор, а полноценный инструмент для создания кастомных сайтов. CMS, анимации, адаптивность — всё без написания кода.</p><p>Кейсы: сайты на Webflow которые выглядят как работы агентств за $20k+.</p>',
-    imageUrl: '/images/articles/webflow-guide.jpg',
-    imageAlt: 'Webflow',
     slug: 'webflow-no-code-websites',
     category: 'No-code',
     readTime: 14,

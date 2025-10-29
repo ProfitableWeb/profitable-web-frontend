@@ -9,7 +9,7 @@ import { getColumnCount } from '@/utils/breakpoints';
 function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
-): (...args: Parameters<T>) => void {
+): ((...args: Parameters<T>) => void) & { cancel: () => void } {
   let timeout: NodeJS.Timeout | null = null;
 
   const debouncedFunc = (...args: Parameters<T>) => {

@@ -7,6 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "serve": "npx serve@latest out",
+    "build:serve": "rm -rf .next out && next build && npx serve@latest out",
     "export": "next build && next export",
     "lint": "next lint",
     "lint:fix": "next lint --fix",

@@ -71,27 +71,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         {formatDate(article.createdAt)}
       </time>
 
-      {/* Изображение и аннотация - скрываются на мобильных */}
+      {/* Аннотация - скрывается на мобильных */}
       {!isMobile && (
         <>
-          {/* Изображение (опционально) - кликабельная область */}
-          {article.imageUrl && (
-            <Link
-              href={`/articles/${article.slug}`}
-              className='article-card__image-link'
-            >
-              <div className='article-card__image-wrap'>
-                <img
-                  src={article.imageUrl}
-                  alt={article.imageAlt || article.title}
-                  className='article-card__image'
-                  loading={isPriority ? 'eager' : 'lazy'}
-                  itemProp='image'
-                />
-              </div>
-            </Link>
-          )}
-
           {/* Аннотация */}
           <div
             itemProp='articleBody'

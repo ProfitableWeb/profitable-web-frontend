@@ -3,14 +3,14 @@
 
 [data-theme="light"],
 :root {
-  --feature-category-text: #009CE0;
-  --feature-category-text-hover: #009CE0;
+  --feature-category-text: #1aa1ca; // Темнее для лучшего контраста на светлом фоне
+  --feature-category-text-hover: #1aa1ca; // Ещё темнее при наведении
 
   --feature-category-bg: transparent;
-  --feature-category-bg-hover: rgba(0, 156, 224, 0.08);
+  --feature-category-bg-hover: rgba(0, 166, 255, 0.041); // Обновлённый цвет для hover
 
-  --feature-category-border: rgba(0, 156, 224, 0.15);
-  --feature-category-border-hover: rgba(0, 156, 224, 0.25);
+  --feature-category-border: rgba(0, 146, 224, 0.178); // Более видимая граница
+  --feature-category-border-hover: rgba(0, 159, 245, 0.45); // Чёткая граница при наведении
 }
 
 

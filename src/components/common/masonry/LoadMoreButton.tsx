@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import './LoadMoreButton.scss';
 
 interface LoadMoreButtonProps {
@@ -24,13 +23,10 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({
 }) => {
   return (
     <div className='load-more'>
-      <motion.button
+      <button
         className='load-more__button'
         onClick={onClick}
         disabled={disabled || isLoading}
-        whileHover={{ scale: disabled || isLoading ? 1 : 1.02 }}
-        whileTap={{ scale: disabled || isLoading ? 1 : 0.98 }}
-        transition={{ duration: 0.2 }}
       >
         {isLoading ? (
           <>
@@ -40,7 +36,7 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({
         ) : (
           <span>Загрузить ещё</span>
         )}
-      </motion.button>
+      </button>
     </div>
   );
 };

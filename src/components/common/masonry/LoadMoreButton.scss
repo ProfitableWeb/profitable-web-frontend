@@ -24,16 +24,48 @@
     border: 2px solid var(--color-border);
     border-radius: 12px;
     cursor: pointer;
-    // Интерактивные hover эффекты + theme transition для цветов
+    position: relative;
+    overflow: hidden;
+    
+    // Плавные transitions как у иконок футера
     transition: 
-      var(--transition-transform),
-      var(--transition-opacity),
-      var(--transition-border),
-      var(--transition-background);
+      border-color 0.3s ease,
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.3s ease;
+
+    // Градиентный фон при hover
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary-light) 0%,
+        transparent 100%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 0;
+    }
+
+    // Контент поверх градиента
+    span {
+      position: relative;
+      z-index: 1;
+    }
 
     &:hover:not(:disabled) {
-      border-color: var(--color-border-hover);
-      background: var(--color-surface-hover);
+      border-color: var(--color-primary);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(-2px);
     }
 
     &:disabled {
@@ -49,6 +81,8 @@
     border-top-color: var(--color-text-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
+    position: relative;
+    z-index: 1;
   }
 }
 
